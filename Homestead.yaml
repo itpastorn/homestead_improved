@@ -6,11 +6,19 @@ provider: virtualbox
 
 folders:
     - map: .
-      to: /home/vagrant/Code
+      to: /home/vagrant/webprojects
 
+# Använd mellanslag - tabbar fungerar inte!
 sites:
-    - map: homestead.app
-      to: /home/vagrant/Code/Project/public
+    - map: wu1-ovningar.app
+      to: /home/vagrant/webprojects/webbutveckling-1/html
+    - map: wu1-slutuppgift.app
+      to: /home/vagrant/webprojects/webbutveckling-1-slutuppgift/html
+    - map: ws1-ovningar.app
+      to: /home/vagrant/webprojects/webbserverprogrammering-1/html
+    - map: ws1-slutuppgift.app
+      to: /home/vagrant/webprojects/webbserverprogrammering-1-slutuppgift/html
+
 
 databases:
     - homestead
@@ -31,3 +39,4 @@ variables:
 #     - send: 7777
 #       to: 777
 #       protocol: udp
+---

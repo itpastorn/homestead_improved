@@ -1,2 +1,6 @@
+# Laravel Homestead
 /vendor
 /.vagrant
+
+# PhpStorm
+.idea/
