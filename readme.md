@@ -9,9 +9,11 @@ A fork of the fork of the original Laravel Homestead, for my students.
  3. Sökvägen till denna är vanligtvis C:\Users\*username*\ på Windows och /home/*username*/ på Linux och Mac OS X.
  4. I din hemmamapp bör du ha en säkerhetskopiering med en molntjänst (Dropbox, OneDrive, Google Drive eller liknande). iCloud är svår att använda i det här sammanhanget pga. Apples krångliga sökvägar. Har du ingen molntjänst, ersätt *cloud* nedan med den katalog du använder lokalt, exempelvis *Documents*. Tips: Utforska dina kataloger på din dator med *kommandotolken* för att se vad de heter.
  5. Detta är din mappstruktur:
+TODO: Kläm in en mapp ("webdev") mellan moln och webprojects och ips-hs
 ```javascript
     ~
     + (molntjänstmapp)
+      + ips-hs  // Denna mapp kommer du snart att skapa med Git
       + webprojects
         + webbutveckling-1 // Denna katalog måste finnas enligt bokens instruktioner
           + html
@@ -21,17 +23,16 @@ A fork of the fork of the original Laravel Homestead, for my students.
           + html
         + webbserverprogrammering-1-slutuppgift // Ditto
           + html
-      + ips-hs  // Denna mapp kommer du snart att skapa med Git
 ```
-De enda mapparna som **måste** vara skapade ännu är alltså *webprojects* och *webbutveckling-1* med undermappen *html*.
+De enda mapparna som redan **måste** vara skapade ännu är alltså *webprojects* och *webbutveckling-1* med undermappen *html*.
 
- 6. Starta kommandotolken och använd kommandot cd för att ställa dig *i den mappen*.
- 7. Skriv dessa kommandon:
+ 6. Starta kommandotolken och använd kommandot cd för att ställa dig i *molntjänstmappen*.
+ 7. Skriv dessa kommandon, exklusive kommentarerna som börjar med #
 ```bash
-git clone --depth=1 (TODO URL detta projekt https) ips-hs # Hämtar detta projekt
+git clone --depth=1 https://github.com/itpastorn/itps-homestead-improved.git ips-hs # Hämtar detta projekt
 cd ips-hs
-bash folderfix.sh
-
+bash folderfix.sh  # Skapar inställningar i filen Homestead.yaml - titta gärna i den
+vagrant up
 ```
   8. Redigera filen som heter *hosts*
      a. I Windows ligger den i mappen *C:\Windows\system32\drivers\etc*
@@ -47,6 +48,10 @@ bash folderfix.sh
 ```
   9. Öppna en webbläsare och skriv följande adress: http://wu1-ovningar.app/tests/
   10. Kontrollera att installationen fungerat genom att klicka på länkarna. Använd bakåtpilen för att se alla de tre testsidorna.
+  11. Avsluta surfningen på servern:
+```bash
+vagrant halt
+```
 
 ## Förklaring TODO
 
