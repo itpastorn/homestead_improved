@@ -1,12 +1,12 @@
 # Itpastorn's Homestead Improved
 
-A fork of the fork of the original Laravel Homestead, for my students.
+A fork of [the fork](https://github.com/Swader/homestead_improved) of the [original Laravel Homestead](https://laravel.com/docs/5.2/homestead), for my students.
 
 ## Hur du använder detta projekt
 
- 1. Hämta hem och installera Git, VirtualBox och Vagrant enligt instruktioner i arbetsboken. TODO: Länkar
- 2. Du förutsätts ha en mappstruktur enligt bokens rekommendation, som startar i din hemmakatalog, kallad **~** (tilde).
- 3. Sökvägen till denna är vanligtvis C:\Users\*username*\ på Windows och /home/*username*/ på Linux och Mac OS X.
+ 1. Hämta hem och installera Git, [VirtualBox](https://www.virtualbox.org/) och [Vagrant](https://www.vagrantup.com/) enligt instruktioner i arbetsboken.
+ 2. Du förutsätts ha en mappstruktur enligt arbetsbokens rekommendation. Den summeras i kommande punkter (3-5).
+ 3. Sökvägen till din hemkatalog är vanligtvis C:\Users\*username*\ på Windows och /home/*username*/ på Linux och Mac OS X.
  4. I din hemmamapp bör du ha en säkerhetskopiering med en molntjänst (Dropbox, OneDrive, Google Drive eller liknande). iCloud är svår att använda i det här sammanhanget pga. Apples krångliga sökvägar. Har du ingen molntjänst, ersätt *cloud* nedan med den katalog du använder lokalt, exempelvis *Documents*. Tips: Utforska dina kataloger på din dator med *kommandotolken* för att se vad de heter.
  5. Detta är din mappstruktur:
 TODO: Kläm in en mapp ("webdev") mellan moln och webprojects och ips-hs
