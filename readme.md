@@ -39,7 +39,7 @@ bash folderfix.sh
      c. Du kan behöva administratörsprivilegier för att kunna ändra i hosts-filen
      d. Du ska lägga till följande rader:
 
-```javascript
+```
 192.168.10.10	wu1-ovningar.app
 192.168.10.10	wu1-slutuppgift.app
 192.168.10.10	ws1-ovningar.app
@@ -64,5 +64,4 @@ https://scotch.io/tutorials/how-to-setup-ssh-public-key-authentication
 Det är en förkortning av itpastorns Homestead Improved.
 
 ## Original comments - things do not work exactly the same any more, but the tutorial is still useful
-HS IMproved this improved version aims to make things even simpler.
-See full explanation with quickstart tutorial [here](http://www.sitepoint.com/quick-tip-get-homestead-vagrant-vm-running/).
+Homestead Improvedaims to make things even simpler. See full explanation with quickstart tutorial [here](http://www.sitepoint.com/quick-tip-get-homestead-vagrant-vm-running/).
