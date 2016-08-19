@@ -12,11 +12,14 @@ A fork of [the fork](https://github.com/Swader/homestead_improved) of the [origi
 ```javascript
     ~
     + (molntjänstmapp)
-      + webdev   // Allt du gör
+      + webdev   // Allt du gör i alla webbteknikkurser
        + ips-hs  // Denna mapp kommer du snart att skapa med Git
        + webprojects
          + webbutveckling-1 // Denna katalog måste finnas enligt bokens instruktioner
-           + html
+           + servertest
+           + laxhjalpen
+             + html
+           + ovningar
          + webbserverprogrammering-1       // Denna katalog kan skapas senare
            + html
          + webbutveckling-1-slutuppgift    // Ditto 
@@ -31,7 +34,7 @@ De enda mapparna som redan **måste** vara skapade ännu är alltså *webdev* so
 ```bash
 git clone --depth=1 https://github.com/itpastorn/itps-homestead-improved.git ips-hs # Hämtar detta projekt
 cd ips-hs
-bash folderfix.sh  # Skapar inställningar i filen Homestead.yaml - titta gärna i den
+bash bin/folderfix.sh  # Skapar inställningar i filen Homestead.yaml - titta gärna på den efteråt
 vagrant up
 ```
   8. Redigera filen som heter *hosts*
@@ -41,14 +44,17 @@ vagrant up
      d. Du ska lägga till följande rader:
 
 ```
-192.168.10.10	wu1-ovningar.app
+192.168.10.10	servertest.app
+192.168.10.10	laxhjalpen.app
+192.168.10.10	wu1-uppgifter.app
 192.168.10.10	wu1-slutuppgift.app
-192.168.10.10	ws1-ovningar.app
+192.168.10.10	laxhjalpen-ws.app
+192.168.10.10	ws1-uppgifter.app
 192.168.10.10	ws1-slutuppgift.app
 ```
-  9. Öppna en webbläsare och skriv följande adress: http://wu1-ovningar.app/tests/
-  10. Kontrollera att installationen fungerat genom att klicka på länkarna. Använd bakåtpilen för att se alla de tre testsidorna.
-  11. 
+  9. Öppna en webbläsare och skriv följande adress: http://servertest.app
+  10. Kontrollera att installationen fungerat genom att klicka på länkarna. Använd bakåtpilen för att komma tillbaka till startsidan.
+  11. TODO SSH
   12. Stäng av servern:
 ```bash
 vagrant halt

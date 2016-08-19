@@ -5,20 +5,25 @@ cpus: 1
 provider: virtualbox
 
 folders:
-    - map: .
+    - map: c:/Users/gunth/Dropbox/webdev/webprojects
       to: /home/vagrant/webprojects
 
 # Använd mellanslag - tabbar fungerar inte!
 sites:
-    - map: wu1-ovningar.app
-      to: /home/vagrant/webprojects/webbutveckling-1/html
-    - map: wu1-slutuppgift.app
-      to: /home/vagrant/webprojects/webbutveckling-1-slutuppgift/html
-    - map: ws1-ovningar.app
-      to: /home/vagrant/webprojects/webbserverprogrammering-1/html
-    - map: ws1-slutuppgift.app
-      to: /home/vagrant/webprojects/webbserverprogrammering-1-slutuppgift/html
-
+    - map: servertest.app
+      to: /home/vagrant/webprojects/webbutveckling-1/servertest
+    - map: laxhjalpen.app
+      to: /home/vagrant/webprojects/webbutveckling-1/laxhjalpen/html
+    - map: wu1-uppgifter.app
+      to: /home/vagrant/webprojects/webbutveckling-1/uppgifter
+#    - map: wu1-slutuppgift.app
+#      to: /home/vagrant/webprojects/webbutveckling-1-slutuppgift/html
+#    - map: laxhjalpen-ws.app
+#      to: /home/vagrant/webprojects/webbserverprogrammering-1/laxhjalpen/html
+#    - map: ws1-uppgifter.app
+#      to: /home/vagrant/webprojects/webbserverprogrammering-1/uppgifter
+#    - map: ws1-slutuppgift.app
+#      to: /home/vagrant/webprojects/webbserverprogrammering-1-slutuppgift/html
 
 databases:
     - homestead
