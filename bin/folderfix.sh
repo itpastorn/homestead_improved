@@ -38,7 +38,7 @@ then
 fi
 
 ## Parent directory must be "webdev"
-if [[ $(basename $PWD) != "ips-hs" ]]
+if [[ $(basename $PWD) != "ips-hs-mac" ]]
 then
   numerrors=$((numerrors + 1))
   echo "Du är inte i katalogen 'ips-hs' just nu"
@@ -110,8 +110,7 @@ webprojects="$webdev/webprojects"
 if [ "$(uname)" == "Darwin" ]
 then
 	# Mac OSX
-    # sed -i '' "s@map\: \.@map\: $webprojects@g" Homestead.yaml
-    echo "s@map\: \.@map\: $webprojects@g"
+    sed -i '' "s@map\: \.@map\: $webprojects@g" Homestead.yaml
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]
 then
     # Linux
