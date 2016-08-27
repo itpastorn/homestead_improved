@@ -38,7 +38,7 @@ then
 fi
 
 ## Parent directory must be "webdev"
-if [[ $(basename $PWD) != "ips-hs-mac" ]]
+if [[ $(basename $PWD) != "ips-hs" ]]
 then
   numerrors=$((numerrors + 1))
   echo "Du är inte i katalogen 'ips-hs' just nu"
