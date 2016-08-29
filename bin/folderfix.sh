@@ -110,8 +110,7 @@ webprojects="$webdev/webprojects"
 if [ "$(uname)" == "Darwin" ]
 then
 	# Mac OSX
-    # sed -i '' "s@map\: \.@map\: $webprojects@g" Homestead.yaml
-    echo "s@map\: \.@map\: $webprojects@g"
+    sed -i '' "s@map\: \.@map\: $webprojects@g" Homestead.yaml
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]
 then
     # Linux
