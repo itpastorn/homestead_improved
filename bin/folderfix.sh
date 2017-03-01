@@ -113,11 +113,11 @@ webprojects="$webdev/webprojects"
 if [ "$(uname)" == "Darwin" ]
 then
 	# Mac OSX
-    sed -i '' "s@map\: \.@map\: $webprojects@g" Homestead.yaml
+    sed '' "s@map\: \.@map\: $webprojects@g" Homestead.yaml.neutral > Homestead.yaml
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]
 then
     # Linux
-	sed -i "s@map\: \.@map\: $webprojects@g" Homestead.yaml
+	sed "s@map\: \.@map\: $webprojects@g" Homestead.yaml.neutral > Homestead.yaml
 elif [ -n "$COMSPEC" -a -x "$COMSPEC" ]
 then
     # Windows - add colon
@@ -127,7 +127,7 @@ then
 
 	sub=${workdir:1:1}
 	workdir=${workdir/$sub/":/"}
-	sed -i "s@map\: \.@map\: $workdir@g" Homestead.yaml
+	sed "s@map\: \.@map\: $workdir@g" Homestead.yaml.neutral > Homestead.yaml
 	echo "s@map\: \.@map\: $workdir@g"
 else
     echo "Okänt operativsystem"
