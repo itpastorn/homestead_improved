@@ -32,7 +32,7 @@ else
 fi
 
 # Check folder structure
-## Current directory must be "ips-hs"
+## Parent directory must be "webdev"
 if [[ $(basename $(dirname $PWD)) != "webdev" ]]
 then
   numerrors=$((numerrors + 1))
@@ -40,8 +40,11 @@ then
   echo "Du är i $PWD"
 fi
 
-## Parent directory must be "webdev"
-if [[ $(basename $PWD) != "ips-hs" ]]
+## Current directory must be "ips-hs"
+## eller ett namn som inleds med de tecknen
+## för att tillåta flera aparallella instanser
+pwdtemp=$(basename $PWD)
+if [[ ${pwdtemp:0:6} != "ips-hs" ]]
 then
   numerrors=$((numerrors + 1))
   echo "Du är inte i katalogen 'ips-hs' just nu"
@@ -113,7 +116,7 @@ webprojects="$webdev/webprojects"
 if [ "$(uname)" == "Darwin" ]
 then
 	# Mac OSX
-    sed '' "s@map\: \.@map\: $webprojects@g" Homestead.yaml.neutral > Homestead.yaml
+    sed "s@map\: \.@map\: $webprojects@g" Homestead.yaml.neutral > Homestead.yaml
 elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]
 then
     # Linux
