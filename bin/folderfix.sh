@@ -8,7 +8,10 @@ numerrors=0
 # http://stackoverflow.com/questions/592620/check-if-a-program-exists-from-a-bash-script
 # http://unix.stackexchange.com/questions/46541/how-can-i-use-bashs-if-test-and-find-commands-together
 
-if [[ -d /c/Program\ Files/Oracle && -n $(find /c/Program\ Files/Oracle -iname "*vbox*") ]]
+if hash virtualbox
+then
+    echo "OK: Virtualbox installerad"
+elif [[ -d /c/Program\ Files/Oracle && -n $(find /c/Program\ Files/Oracle -iname "*vbox*") ]]
 then
     echo "OK: VirtualBox är installerad (windows)"
 elif [[ -d /Applications/VirtualBox.app && -n $(find /Applications/VirtualBox.app -iname "*vbox*") ]]
