@@ -5,7 +5,7 @@
 Php styrs av en settingsfil som heter *php.ini* inuti den virtuella maskinen.
 Sökvägen till filen är när detta skrivs
 
-    /etc/php/7.0/fpm/
+    /etc/php/7.1/fpm/
 
 Kanske har du en annan version av PHP aktiverad.
 
@@ -32,7 +32,7 @@ behöver du ändra i din php.ini-fil. Gå till terminalen och skriv detta:
 ```bash
     cd path/to/ips-hs
     vagrant ssh
-    cd /etc/php/7.0/fpm/ # Eller vad du såg i förra avsnittet
+    cd /etc/php/7.1/fpm/ # Eller vad du såg i förra avsnittet
     sudo nano php.ini
 ```
 
